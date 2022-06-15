@@ -1,7 +1,5 @@
 from selene.support.shared import browser
 import pytest
-import selene
-
 
 
 @pytest.fixture(scope='session', autouse=True)

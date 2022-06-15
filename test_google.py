@@ -9,15 +9,14 @@ selene_search_result = 'yashaka/selene: User-oriented Web UI browser tests in Py
 
 
 def test_search_selene(browser_size):
-    search_selene(text=selene_search_query, condition=have.text(selene_search_result))
+    search_for(text=selene_search_query, condition=have.text(selene_search_result))
 
 
 def test_search_selene_fail(browser_size):
-    search_selene(text=invalid_search_query, condition=have.no.texts())
+    search_for(text=invalid_search_query, condition=have.no.texts())
 
 
-def search_selene(text: str, condition: Condition):
+def search_for(text: str, condition: Condition):
     query = browser.element('[name="q"]')
     query.should(be.blank).type(text).press_enter()
-    search = browser.element('#search')
-    search.should(condition)
+    search = browser.element('#search').should(condition)
