@@ -3,3 +3,8 @@ def test_first():
 
 def test_simple():
     assert 5 < 1
+
+
+def test_tt():
+    assert 3 > 1
+
