@@ -19,12 +19,3 @@ def find_registration_button_on_login_page():
 functions = [open_browser, go_to_companyname_homepage, find_registration_button_on_login_page]
 
 printing_name_and_args(functions)
-
-
-
-
-
-
-
-
-
