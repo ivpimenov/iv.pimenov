@@ -9,7 +9,7 @@ def go_to_companyname_homepage(page_url):
 def find_registration_button_on_login_page():
     pass
 
-functions = [open_browser, go_to_companyname_homepage, find_registration_button_on_login_page]
+function = [open_browser, go_to_companyname_homepage, find_registration_button_on_login_page]
 
 def printing_name_and_args(args):
     for arg in args:
@@ -19,7 +19,7 @@ def printing_name_and_args(args):
         else:
             print("Аргумент(ы) функции:", arg.__code__.co_varnames)
 
-printing_name_and_args(functions)
+printing_name_and_args(function)
 
 
 
